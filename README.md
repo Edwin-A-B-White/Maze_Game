@@ -14,7 +14,7 @@ A simple Python maze game built using PySimpleGUI and the `keyboard` module. Des
 
    ```bash
    git clone https://github.com/Edwin-A-B-White/Maze_Game.git
-   cd Maze-Game
+   cd Maze_Game
    ```
 
 2. (Optional) Create a virtual environment:
