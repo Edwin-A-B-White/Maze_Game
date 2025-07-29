@@ -7,14 +7,14 @@ import time  # For animation timing and delays
 import PySimpleGUI as sg  # GUI library for drawing and events
 import keyboard  # For detecting real-time keyboard input
 
-# —— CONFIGURATION —— #
+#CONFIGURATION
 CELL_SIZE         = 20     # Size of each maze cell in pixels
 MAX_FAILS_PER_MAP = 10     # Maximum number of failed attempts allowed per maze
 NUM_MAPS          = 5      # Total number of different mazes to play through
 MAZE_WIDTH        = 41     # Maze width in cells (must be odd for proper generation)
 MAZE_HEIGHT       = 31     # Maze height in cells (must be odd for proper generation)
 
-# —— MAZE GENERATOR (perfect maze via recursive backtracker) —— #
+#MAZE GENERATOR (perfect maze via recursive backtracker)
 def generate_maze(w, h):
     # Initialize grid full of walls (1 represents wall, 0 will represent path)
     grid = [[1] * w for _ in range(h)]
@@ -47,7 +47,7 @@ WIDTH   = MAZE_WIDTH
 start_pos = (1, 1)  # Starting cell in maze coordinates (row, col)
 exit_pos  = (HEIGHT - 2, WIDTH - 2)  # Exit cell near bottom-right
 
-# —— HELPER FUNCTIONS —— #
+#HELPER FUNCTIONS
 def grid_to_pixel(r, c):
     # Convert maze grid coordinates to pixel coordinates for drawing
     x = c * CELL_SIZE + CELL_SIZE / 2
@@ -100,7 +100,7 @@ def draw_map(graph, map_idx, failed_paths):
     # Return initial player position and the figure for animation
     return pr, pc, player_fig
 
-# —— SETUP GUI —— #
+#SETUP GUI
 username = sg.popup_get_text('Enter your username:', 'Maze Game') or 'Anonymous'
 sg.theme('DarkBlue3')  # Set window theme
 
@@ -115,7 +115,7 @@ status = sg.Text('', key='-STATUS-')  # Text element for status updates
 layout = [[status], [graph]]
 window = sg.Window('Maze Game', layout, return_keyboard_events=True, finalize=True)
 
-# —— INITIAL GAME STATE —— #
+#INITIAL GAME STATE
 map_index      = 0                             # Current maze index
 fail_counts    = [0] * NUM_MAPS                # Fail count per maze
 failed_paths   = [[] for _ in range(NUM_MAPS)] # Store paths that led to dead ends
@@ -125,7 +125,7 @@ total_attempts = 0                             # Total move attempts across game
 player_row, player_col, player_fig = draw_map(graph, map_index, failed_paths)
 current_path = [start_pos]  # Track current path for dead-end detection
 
-# —— MAIN EVENT LOOP —— #
+#MAIN EVENT LOOP
 while True:
     # Update status bar with current progress
     window['-STATUS-'].update(
