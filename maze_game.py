@@ -238,7 +238,7 @@ while True:
             current_path = [start_pos]
             player_row, player_col, player_fig = draw_map(graph, map_index, failed_paths)
 
-        # Add a small delay to control update speed
+        # Add a small delay to control movement speed
         time.sleep(0.01 if sprint else 0.05)
 
 # Close the window and exit cleanly
