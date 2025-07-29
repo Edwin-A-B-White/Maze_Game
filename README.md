@@ -2,13 +2,13 @@
 
 A simple Python maze game built using PySimpleGUI and the `keyboard` module. Designed for the Sophia Introduction to Python course.
 
-## 📦 Requirements
+##  Requirements
 
 - Python 3.10 or later
 - `PySimpleGUI`
 - `keyboard`
 
-## 🛠 Installation
+##  Installation
 
 1. Download or clone the repository:
 
@@ -30,7 +30,7 @@ A simple Python maze game built using PySimpleGUI and the `keyboard` module. Des
    pip install -r requirements.txt
    ```
 
-   > ✅ Note: If `PySimpleGUI` has trouble installing or gives and error on game launch, try:
+   >  Note: If `PySimpleGUI` has trouble installing or gives and error on game launch, try:
    > ```bash
    > pip install --upgrade --extra-index-url https://PySimpleGUI.net/install PySimpleGUI
    > ```
@@ -41,7 +41,7 @@ A simple Python maze game built using PySimpleGUI and the `keyboard` module. Des
    python maze_game.py
    ```
 
-## 🎮 Controls
+##  Controls
 
 - Use arrow keys or WASD to move
 - Hold Shift to sprint
