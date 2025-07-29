@@ -47,7 +47,7 @@ A simple Python maze game built using PySimpleGUI and the `keyboard` module. Des
 - Hold Shift to sprint
 - Escape or click X to quit
 
-## 🗚 Tested On
+##  Tested On
 
 - Python 3.10.11
 - Windows 11
